@@ -53,3 +53,17 @@ else // overlaps
 //  we can replace all of them (merge) with
 
 min(A[i].start,x.start),max(A[j].end,x.end)
+
+// merge all overlapping intervals (NLogN)
+
+sort(A)	// sort A on start time
+t=A[0]
+ans=[]
+for i = 1 to N
+	if(A[i].start<=t.end)	// overlapping
+		t={min(A[i].start,t.start),max(A[i].end,t.end)}
+	else
+		ans.pb(t)
+		t=A[i]
+ans.pb(t)
+return ans
