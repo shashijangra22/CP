@@ -18,25 +18,56 @@ using namespace std;
 #define s second
 #define ub upper_bound
 #define lb lower_bound
+#define loop(x,y) for(ll i=x; i<=y; i++)
+#define rloop(x,y) for(ll i=x; i>=y; i--)
 #define all(x) x.begin(), x.end()
 #define sum(x) accumulate(all(x),0LL)
 #define minE(x) *min_element(all(x))
 #define maxE(x) *max_element(all(x))
-#define i_to_j(x,i,j) x.begin()+i, x.begin()+j
 #define mem(a,b) memset(a,b,sizeof(a))
 #define endl "\n"
-ll solve(ll n){
-	ll ans=0;
-	// TODO
-	return ans;
-}
 int main(){
 	IOS
-	ll t,n;
-	cin>>t;
-	while(t--){
-		cin>>n;
-		cout<<solve(n)<<endl;
+	ll n,temp;
+	cin>>n;
+	vi arr;
+	loop(0,n-1){
+		cin>>temp;
+		arr.pb(n-temp);
+	}
+	int flag=0;
+	loop(1,n-1){
+		if(arr[i]==arr[i-1]) continue;
+		else {
+			flag=1;
+			break;
+		}
+	}
+	if(flag){
+		cout<<"Possible\n";
+		loop(1,n){
+			cout<<1<<" ";
+		}
+		return 0;
+	}
+	map<ll> freq;
+	for(auto x:arr){
+		freq[x]++;
+	}
+	for(auto x:freq){
+		if(x.first!=x.second){
+			flag=1;
+			break;
+		}
+	}
+	if(flag) cout<<"Impossible";
+	else{
+		cout<<"Possible\n";
+		for(auto x:freq){
+			loop(1,x.second){
+				cout<<i<<" ";
+			}
+		}
 	}
 	return 0;
 }

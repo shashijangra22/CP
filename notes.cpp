@@ -67,3 +67,21 @@ for i = 1 to N
 		t=A[i]
 ans.pb(t)
 return ans
+
+// hotel bookings possible in NlogN with k hotels
+
+for(auto x:ArrivalDays) v.pb({x,1})
+for(auto x:DepartureDays) v.pb({x,0}) // 0 on departure so that clashes can be resolved
+x=0
+for(auto i:v)
+	if(i.second) x++;
+	else x--;
+	if(x>K) return false
+return true
+
+// traversing anti-diagonals
+
+loop(0,A.size())
+	loop(0,A.size())
+		ans[x+y].pb(A[x][y])
+return ans;
