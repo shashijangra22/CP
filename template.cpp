@@ -18,8 +18,8 @@ using namespace std;
 #define s second
 #define ub upper_bound
 #define lb lower_bound
-#define loop(x,y) for(ll i=x; i<=y; i++)
-#define rloop(x,y) for(ll i=x; i>=y; i--)
+#define loop(x,y,z) for(ll i=x; i<=y; i+=z)
+#define rloop(x,y,z) for(ll i=x; i>=y; i-=z)
 #define all(x) x.begin(), x.end()
 #define sum(x) accumulate(all(x),0LL)
 #define minE(x) *min_element(all(x))

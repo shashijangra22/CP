@@ -32,16 +32,16 @@ return {sum,range};
 // trailing zeroes in n!
 
 while(n)
-    ans+=(n/=5)
-return ans
+    ans+=(n/=5);
+return ans;
 
 // duplicate element if range(1,n) and size is n+1
 
-slow=fast=0
+slow=fast=0;
 while ((slow=A[slow])!=(fast=A[A[fast]]));
-fast=0
+fast=0;
 while ((slow=A[slow])!=(fast=A[fast]));
-return slow
+return slow;
 
 // merge an interval in n disjoint intervals
 
@@ -52,36 +52,48 @@ else // overlaps
 // if intervals from i to j overlaps with a given interval x
 //  we can replace all of them (merge) with
 
-min(A[i].start,x.start),max(A[j].end,x.end)
+min(A[i].start,x.start),max(A[j].end,x.end);
 
 // merge all overlapping intervals (NLogN)
 
-sort(A)	// sort A on start time
-t=A[0]
-ans=[]
-for i = 1 to N
+sort(A);	// sort A on start time
+t=A[0];
+ans=[];
+loop(1,N)
 	if(A[i].start<=t.end)	// overlapping
-		t={min(A[i].start,t.start),max(A[i].end,t.end)}
+		t={min(A[i].start,t.start),max(A[i].end,t.end)};
 	else
-		ans.pb(t)
-		t=A[i]
-ans.pb(t)
-return ans
+		ans.pb(t);
+		t=A[i];
+ans.pb(t);
+return ans;
 
 // hotel bookings possible in NlogN with k hotels
 
-for(auto x:ArrivalDays) v.pb({x,1})
-for(auto x:DepartureDays) v.pb({x,0}) // 0 on departure so that clashes can be resolved
-x=0
+for(auto x:ArrivalDays) v.pb({x,1});
+for(auto x:DepartureDays) v.pb({x,0}); // 0 on departure so that clashes can be resolved
+x=0;
 for(auto i:v)
 	if(i.second) x++;
 	else x--;
-	if(x>K) return false
-return true
+	if(x>K) return false;
+return true;
 
 // traversing anti-diagonals
 
 loop(0,A.size())
 	loop(0,A.size())
-		ans[x+y].pb(A[x][y])
+		ans[x+y].pb(A[x][y]);
 return ans;
+
+// inplace next_permutation(A)
+
+rloop(A.size(),1)
+	if(A[x-1] < A[x])	// decreasing(affected) suffix breakpoint x
+		break;
+if(x)	// x=0 means descending vector
+	rloop(A.size(),x)
+		if(A[i]>A[x-1])	// finding first A[i]>A[x-1]
+			swap(A[i],A[x-1]); // to swap with
+			break;
+reverse(A.begin()+x,A.end());	// reversing the affected suffix
