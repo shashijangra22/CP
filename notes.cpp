@@ -97,3 +97,33 @@ if(x)	// x=0 means descending vector
 			swap(A[i],A[x-1]); // to swap with
 			break;
 reverse(A.begin()+x,A.end());	// reversing the affected suffix
+
+// majority element with freq N/K in given vector V
+
+// fact: at most K-1 elements can be in solution
+map<int,int>bucket;
+vector<int>ans;
+for(auto x:V){
+    if(bucket[x]) bucket[x]++;
+    else{
+        if(bucket.size()<k-1) bucket[x]++;
+        else for(auto i:bucket) i.second--;
+    }
+}
+for(auto item:bucket){
+    item.second=0;
+    for(auto x:V){
+        if(item.first==x) item.second++;
+    }
+    if(item.second>V.size()/k) ans.push_back(item.first);
+}
+return ans;
+
+// majority element for N/2
+
+a,c=0
+for(auto x:A){
+	if(!c) a=x;
+	c+=(a==x)?1:-1;
+}
+return a
