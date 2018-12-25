@@ -28,46 +28,10 @@ using namespace std;
 #define endl "\n"
 int main(){
 	IOS
-	ll n,temp;
-	cin>>n;
-	vi arr;
-	loop(0,n-1){
-		cin>>temp;
-		arr.pb(n-temp);
-	}
-	int flag=0;
-	loop(1,n-1){
-		if(arr[i]==arr[i-1]) continue;
-		else {
-			flag=1;
-			break;
-		}
-	}
-	if(flag){
-		cout<<"Possible\n";
-		loop(1,n){
-			cout<<1<<" ";
-		}
-		return 0;
-	}
-	map<ll> freq;
-	for(auto x:arr){
-		freq[x]++;
-	}
-	for(auto x:freq){
-		if(x.first!=x.second){
-			flag=1;
-			break;
-		}
-	}
-	if(flag) cout<<"Impossible";
-	else{
-		cout<<"Possible\n";
-		for(auto x:freq){
-			loop(1,x.second){
-				cout<<i<<" ";
-			}
-		}
+	ll t;
+	cin>>t;
+	while(t--){
+
 	}
 	return 0;
 }
