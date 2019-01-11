@@ -26,17 +26,45 @@ using namespace std;
 #define maxE(x) *max_element(all(x))
 #define mem(a,b) memset(a,b,sizeof(a))
 #define endl "\n"
-
-ll gcd(ll a, ll b){
-	return (!b)?a:gcd(b,a%b);
-}
-
 int main(){
 	IOS
-	ll t;
-	cin>>t;
-	while(t--){
-
+	ll n,temp,last=0,ans=1;
+	cin>>n;
+	vector<pair<ll,ll>> v;
+	vi b(n,0);
+	loop(0,n-1,1){
+		cin>>temp;
+		v.pb({temp,i});
 	}
+	temp=v[0].first;
+	rloop(n-1,0,1){
+		if(v[i].first==temp){
+			last=i;
+			break;
+		}
+	}
+	loop(0,last,1) b[i]=1;
+	sort(all(v));
+	ll i=0;
+	ll end=0;
+	while(i<v.size()){
+		temp=v[i].first;
+		ll start=v[i].second;
+		if(b[start]==0){
+			b[start]=2;
+		}
+		i++;
+		start++;
+		while(i<v.size() && temp==v[i].first){
+			i++;
+		}
+		if(start<=v[i-1].second)
+			intervals.pb({start,v[i-1].second});
+		// for(int k=start; k<=v[i-1].second; k++) b[k]=1;
+	}
+	for(auto x:b){
+		ans=(ans*x)%998244353;
+	}
+	cout<<ans;
 	return 0;
 }

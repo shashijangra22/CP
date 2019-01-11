@@ -1,3 +1,4 @@
+// https://www.spoj.com/problems/ACPC10A/
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -26,17 +27,17 @@ using namespace std;
 #define maxE(x) *max_element(all(x))
 #define mem(a,b) memset(a,b,sizeof(a))
 #define endl "\n"
-
-ll gcd(ll a, ll b){
-	return (!b)?a:gcd(b,a%b);
+ll solve(ll x){
+	return (x*(x+1)*(2*x+1))/6;
 }
-
 int main(){
 	IOS
-	ll t;
-	cin>>t;
-	while(t--){
-
+	ll a,b,c;
+	while(1){
+		cin>>a>>b>>c;
+		if(!a && !b && !c) break;
+		if(c-b == b-a) cout<<"AP "<<2*c - b<<endl;
+		else cout<<"GP "<<c*(c/b)<<endl;		
 	}
 	return 0;
 }
