@@ -31,6 +31,12 @@ ll gcd(ll a, ll b){
 	return (!b)?a:gcd(b,a%b);
 }
 
+vi makePrefix(vi &v){
+	vi p(v.size()+1,0);
+	loop(0,v.size()-1,1) p[i+1]=p[i]+v[i];
+	return p;
+}
+
 int main(){
 	IOS
 	ll t;

@@ -127,3 +127,7 @@ for(auto x:A){
 	c+=(a==x)?1:-1;
 }
 return a
+
+// all individually linearly dependent vectors reduces to 
+// same vector when divided by GCD of their elements
+
