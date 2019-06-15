@@ -4,8 +4,6 @@ using namespace std;
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define vi vector<ll>
 #define vvi vector<vi>
-#define uSet unordered_set<ll>
-#define oSet set<ll>
 #define Q queue<ll>
 #define DQ deque<ll> 
 #define pb push_back
