@@ -35,6 +35,10 @@ vi makePrefix(vi &v){
 	return p;
 }
 
+void display(vi &v,string c){
+	for(auto x:v) cout<<x<<c;
+}
+
 int main(){
 	IOS
 	ll t;
