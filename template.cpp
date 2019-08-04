@@ -23,6 +23,7 @@ using namespace std;
 #define minE(x) *min_element(all(x))
 #define maxE(x) *max_element(all(x))
 #define mem(a,b) memset(a,b,sizeof(a))
+#define watch(x) cout<<(#x)<<" is "<<x
 #define endl "\n"
 
 ll gcd(ll a, ll b){
