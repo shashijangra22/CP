@@ -9,8 +9,21 @@ for(auto x:v){		// v is a vector
 	t=max(x,t+x); 	// either that element is maximum or is end of an array that's sum is max
 	sum=max(sum,t); 	// calculating max sum in a loop
 }
+return sum
 
-return sum;
+// max product in contiguous sub array
+// find that negative sign to which either left or right part is ans
+left=1,right=n
+leftprod=v[left],rightProd=v[right]
+ans=INT_MIN
+while(left<n){
+	leftprod*=v[left]
+	rightProd*=v[right]
+	ans=max(ans,leftprod,rightProd)
+	left++;
+	right--;
+}
+return ans
 
 // starting and ending index in Kadane's Algorithm
 // NOTE: if all A[i]<0 then range is index of max_element(A)
