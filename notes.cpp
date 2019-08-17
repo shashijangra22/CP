@@ -144,3 +144,23 @@ return a
 // all individually linearly dependent vectors reduces to 
 // same vector when divided by GCD of their elements
 
+// next palindrome
+if(allNines(str)) return str+2;
+left=str[:mid]
+right=reverse(left);	
+if (len(str) is even){
+	ans=left+right
+	if (ans>str) return ans
+	return (addone(left) + reverse(addone(left)))
+}
+else{
+	ans=left+str[mid]+right
+	if(ans>str) return ans
+	if(str[mid]=='9'){
+		x=addone(left+str[mid])
+		return x[:-1]+x[-1]+reverse(x[:-1])
+	}
+	else{
+		return left + ++str[mid] + right
+	}
+}
