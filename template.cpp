@@ -23,22 +23,15 @@ using namespace std;
 #define minE(x) *min_element(all(x))
 #define maxE(x) *max_element(all(x))
 #define watch(x) cout<<(#x)<<" is "<<x
+#define display(v,c) for(auto x:v) cout<<x<<c;
 #define endl "\n"
 
 ll gcd(ll a, ll b){
 	return (!b)?a:gcd(b,a%b);
 }
 
-void display(vi &v,string c){
-	for(auto x:v) cout<<x<<c;
-}
-
 int main(){
 	IOS
-	ll t;
-	cin>>t;
-	while(t--){
-
-	}
+	// do magic here
 	return 0;
 }
