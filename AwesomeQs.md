@@ -1,5 +1,6 @@
 #binary-search
 	- http://www.spoj.com/problems/AGGRCOW/
+	- https://atcoder.jp/contests/abc141/tasks/abc141_e
 
 #Greedy:
 	- https://www.spoj.com/problems/GCJ101BB/

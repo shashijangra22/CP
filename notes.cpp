@@ -164,3 +164,7 @@ else{
 		return left + ++str[mid] + right
 	}
 }
+
+// divisors upto number N as Div[x]?
+vi Div(N,1);
+for(ll x=2;x<=N,x++) for(ll y=x;y<=N;y+=x) Div[y]++;
