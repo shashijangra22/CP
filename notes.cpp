@@ -44,8 +44,7 @@ return {sum,range};
 
 // trailing zeroes in n!
 
-while(n)
-    ans+=(n/=5);
+while(n) ans+=(n/=5);
 return ans;
 
 // duplicate element if range(1,n) and size is n+1
@@ -165,6 +164,34 @@ else{
 	}
 }
 
+// factors of a number N in sqrt(N)
+vi factors;
+for(ll x=2; x<=sqrt(N); x++) if (N%x==0) factors.push_back(x), while(N%x==0) N/=x;
+if(N>2) factors.push_back(N);
+
 // divisors upto number N as Div[x]?
 vi Div(N,1);
 for(ll x=2;x<=N,x++) for(ll y=x;y<=N;y+=x) Div[y]++;
+
+// prime sieve upto MAX
+vector<bool> P(MAX,1);
+for(ll i=2,i<=sqrt(MAX),i++) if (P[i]) for(ll j=i+i,j<=MAX,j+=i) P[j]=0;
+
+// DSU
+
+vector<ll> parent(n); // initially self
+vector<ll> sizes(n,1); // initially 1
+ 
+ll FIND(ll a){ return (a==parent[a])?a:parent[a]=FIND(parent[a]); }
+
+bool CHECK(ll a, ll b) { return FIND(a)==FIND(b); }
+
+void JOIN(ll a, ll b) { parent[FIND(b)]=FIND(a); }
+
+void UNION(ll a, ll b){ // union by size
+	ll xRoot=FIND(a),yRoot=FIND(b);
+	if(xRoot==yRoot) return;
+	if(sizes[xRoot]<sizes[yRoot]) swap(xRoot,yRoot);
+	parent[yRoot]=xRoot;
+	sizes[xRoot]+=sizes[yRoot];
+}

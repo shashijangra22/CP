@@ -1,6 +1,6 @@
 // instead of ceil(a/b) we can use
 
-(a/b)+(a%b!=0)
+(a+b-1)/b
 
 // instead of (low+high)/n use
 
