@@ -26,11 +26,10 @@ using namespace std;
 #define maxE(x) *max_element(all(x))
 #define watch(x) cout<<(#x)<<" is "<<x<<'\n'
 #define display(v,c) for(auto x:v) cout<<x<<c;
+#define setbits(x) __builtin_popcount(x)
+#define ctoi(x) (int)((x)-'a')
 #define endl "\n"
 
-ll gcd(ll a, ll b){
-	return (!b)?a:gcd(b,a%b);
-}
 
 int main(){
 	IOS
