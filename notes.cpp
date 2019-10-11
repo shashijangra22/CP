@@ -170,12 +170,12 @@ ll gcd(ll a, ll b){
 
 // factors of a number N in sqrt(N)
 vi factors;
-for(ll x=2; x<=sqrt(N); x++) if (N%x==0) factors.push_back(x), while(N%x==0) N/=x;
-if(N>2) factors.push_back(N);
+for(ll x=2; x<=sqrt(N); x++) if (N%x==0) factors.pb(x), while(N%x==0) N/=x;
+if(N>2) factors.pb(N);
 
 // divisors upto number N as Div[x]?
-vi Div(N,1);
-for(ll x=2;x<=N,x++) for(ll y=x;y<=N;y+=x) Div[y]++;
+vvi Div(N);
+loop(i,1,sqrt(N),1) loop(j,i,N,i) Div[j].pb(i);
 
 // prime sieve upto MAX
 vector<bool> P(MAX,1);

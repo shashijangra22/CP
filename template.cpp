@@ -13,12 +13,10 @@ using namespace std;
 #define p_q priority_queue<ll,vi,greater<ll>>
 #define pb push_back
 #define popb pop_back
-#define f first
-#define s second
 #define ub upper_bound
 #define lb lower_bound
-#define loop(i,x,y,z) for(ll i=x; i<=y; i+=z)
-#define loopR(i,x,y,z) for(ll i=x; i>=y; i-=z)
+#define loop(i,x,y,z) for(int i=x; i<=y; i+=z)
+#define loopR(i,x,y,z) for(int i=x; i>=y; i-=z)
 #define all(x) begin(x), end(x)
 #define allR(x) rbegin(x), rend(x)
 #define sum(x) accumulate(all(x),0LL)
@@ -29,7 +27,6 @@ using namespace std;
 #define setbits(x) __builtin_popcount(x)
 #define ctoi(x) (int)((x)-'a')
 #define endl "\n"
-
 
 int main(){
 	IOS
