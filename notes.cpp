@@ -175,11 +175,22 @@ if(N>2) factors.pb(N);
 
 // divisors upto number N as Div[x]?
 vvi Div(N);
-loop(i,1,sqrt(N),1) loop(j,i,N,i) Div[j].pb(i);
+loop(i,1,N,1) loop(j,i,N,i) Div[j].pb(i);
 
 // prime sieve upto MAX
 vector<bool> P(MAX,1);
 for(ll i=2,i<=sqrt(MAX),i++) if (P[i]) for(ll j=i+i,j<=MAX,j+=i) P[j]=0;
+
+
+// phi(1..N) in sqrt(N)
+
+loop(i,1,N,1) phi[i]=i;
+loop(i,2,N,1){
+	if (phi[i]==i){ // isPrime
+		phi[i]--;
+		loop(j,i+i,N,i) phi[j]=(phi[j]/i)*(i-1);
+	}
+}
 
 // DSU
 
