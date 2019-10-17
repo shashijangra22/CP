@@ -183,6 +183,7 @@ for(ll i=2,i<=sqrt(MAX),i++) if (P[i]) for(ll j=i+i,j<=MAX,j+=i) P[j]=0;
 
 
 // phi(1..N) in sqrt(N)
+// phi[i] is only prime (i.e 2) for i=3,4,6
 
 loop(i,1,N,1) phi[i]=i;
 loop(i,2,N,1){
