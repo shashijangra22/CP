@@ -1,3 +1,8 @@
+// min and max of 2 numbers without using relational operators
+
+max=(a+b+abs(a-b))/2
+min=(a+b-abs(a-b))/2
+
 // min path between 2 points x1,y1 & x2,y2
 
 max(abs(x1-x2),abs(y1-y2));
