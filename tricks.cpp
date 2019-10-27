@@ -5,3 +5,4 @@
 // instead of (low+high)/n use
 
 low+(high-low)/n	// avoid overflows
+

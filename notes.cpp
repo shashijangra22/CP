@@ -1,12 +1,3 @@
-// min and max of 2 numbers without using relational operators
-
-max=(a+b+abs(a-b))/2
-min=(a+b-abs(a-b))/2
-
-// min path between 2 points x1,y1 & x2,y2
-
-max(abs(x1-x2),abs(y1-y2));
-
 // max sum contiguous sub array (Kadane's Algorithm)
 
 t=INT_MIN, sum=0;
@@ -47,10 +38,6 @@ for(int i=0; i<A.size(); i++){
 
 return {sum,range};
 
-// trailing zeroes in n!
-
-while(n) ans+=(n/=5);
-return ans;
 
 // duplicate element if range(1,n) and size is n+1
 
@@ -61,10 +48,6 @@ while ((slow=A[slow])!=(fast=A[fast]));
 return slow;
 
 // merge an interval in n disjoint intervals
-
-// key points: for any 2 intervals a-b & c-d
-if (max(a,c)>min(b,d)) // disjoint intervals
-else // overlaps
 
 // if intervals from i to j overlaps with a given interval x
 //  we can replace all of them (merge) with
@@ -167,92 +150,4 @@ else{
 	else{
 		return left + ++str[mid] + right
 	}
-}
-
-ll gcd(ll a, ll b){
-	return (!b)?a:gcd(b,a%b);
-}
-
-// factors of a number N in sqrt(N)
-vi factors;
-for(ll x=2; x<=sqrt(N); x++) if (N%x==0) factors.pb(x), while(N%x==0) N/=x;
-if(N>2) factors.pb(N);
-
-// divisors upto number N as Div[x]?
-vvi Div(N);
-loop(i,1,N,1) loop(j,i,N,i) Div[j].pb(i);
-
-// prime sieve upto MAX
-vector<bool> P(MAX,1);
-for(ll i=2,i<=sqrt(MAX),i++) if (P[i]) for(ll j=i+i,j<=MAX,j+=i) P[j]=0;
-
-
-// phi(1..N) in sqrt(N)
-// phi[i] is only prime (i.e 2) for i=3,4,6
-
-loop(i,1,N,1) phi[i]=i;
-loop(i,2,N,1){
-	if (phi[i]==i){ // isPrime
-		phi[i]--;
-		loop(j,i+i,N,i) phi[j]=(phi[j]/i)*(i-1);
-	}
-}
-
-// binary exponentiation
-
-modPow(a,b,m){
-	ll res=1
-	while(b){
-		if (b&1) res=(res*a)%m;
-		a=(a*a)%m;
-		b>>=1;
-	}
-	return res%m;
-}
-
-// DSU
-
-vector<ll> parent(n); // initially self
-vector<ll> sizes(n,1); // initially 1
- 
-ll FIND(ll a){ return (a==parent[a])?a:parent[a]=FIND(parent[a]); }
-
-bool CHECK(ll a, ll b) { return FIND(a)==FIND(b); }
-
-void JOIN(ll a, ll b) { parent[FIND(b)]=FIND(a); }
-
-void UNION(ll a, ll b){ // union by size
-	ll xRoot=FIND(a),yRoot=FIND(b);
-	if(xRoot==yRoot) return;
-	if(sizes[xRoot]<sizes[yRoot]) swap(xRoot,yRoot);
-	parent[yRoot]=xRoot;
-	sizes[xRoot]+=sizes[yRoot];
-}
-
-// segment tree
-
-const int MAX_N = (int)1e5 + 777;  // limit for array size
-ll TREE[2 * MAX_N];
-
-void build() { loopR(i,n-1,1,1) TREE[i]=TREE[i<<1] + TREE[i<<1|1]; }
-
-void update(ll x,ll p) {
-	p--;
-	p+=n;
-	TREE[p]=x;
-	for (;p > 0; p >>= 1) TREE[p>>1] = TREE[p] + TREE[p^1];
-}
-
-ll query(ll l, ll r){
-	ll ans=0;
-	--l,--r;
-	l+=n,r+=n;
-	r++;
-	while(l < r) {
-	    if (l&1) ans+=TREE[l++];
-		if (r&1) ans+=TREE[--r];
-		l>>=1;
-		r>>=1;
-	}
-	return ans;
 }
