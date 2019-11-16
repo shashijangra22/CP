@@ -28,19 +28,34 @@ ll query(int l, int r){
 
 // DSU
 
-vector<ll> parent(n); // initially self
-vector<ll> sizes(n,1); // initially 1
- 
-ll FIND(ll a){ return (a==parent[a])?a:parent[a]=FIND(parent[a]); }
+struct DSU{
+	vector<int> parent,low,high;
 
-bool CHECK(ll a, ll b) { return FIND(a)==FIND(b); }
+	DSU(int n){
+		parent.resize(n);
+		iota(all(parent),0);
+		low=high=parent;
+	}
 
-void JOIN(ll a, ll b) { parent[FIND(b)]=FIND(a); } // naive union
+	int FIND(int x){
+		if (parent[x]==x) return x;
+		return parent[x]=FIND(parent[x]);
+	}
 
-void UNION(ll a, ll b){ // union by size
-	ll xRoot=FIND(a),yRoot=FIND(b);
-	if(xRoot==yRoot) return;
-	if(sizes[xRoot]<sizes[yRoot]) swap(xRoot,yRoot);
-	parent[yRoot]=xRoot;
-	sizes[xRoot]+=sizes[yRoot];
-}
+	bool UNION(int u, int v){
+		u=FIND(u),v=FIND(v);
+		if (u==v) return false;
+		low[u]=min(low[u],low[v]);
+		high[u]=max(high[u],high[v]);
+		parent[v]=u;
+		return true;
+	}
+
+	int getHigh(int x){
+		return high[FIND(x)];
+	}
+
+	int getLow(int x){
+		return low[FIND(x)];
+	}
+};
