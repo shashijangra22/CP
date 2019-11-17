@@ -10,6 +10,7 @@
 	- https://leetcode.com/problems/count-of-smaller-numbers-after-self
 	- https://codeforces.com/contest/1234/problem/D
 	- https://www.hackerrank.com/contests/hack-it-to-win-it-paypal/challenges/q4-traveling-is-fun
+	- https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050edd/00000000001a274e
 
 #Graph:
 	- https://codeforces.com/contest/659/problem/E
