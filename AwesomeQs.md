@@ -21,3 +21,6 @@
 
 #Geometry:
 	- https://www.spoj.com/problems/CLOPPAIR/
+#DP:
+	- #DigitDp:
+		- https://www.hackerearth.com/problem/algorithm/sum-of-digits-8/
