@@ -5,25 +5,29 @@ struct SegTree{
 	ll TREE[2 * MAX]={0};
 	ll n;
 
-	SegTree(vector<ll> arr,int sz){
+	SegTree(vector<ll> &arr,int sz){
 		n=sz;
 		loop(i,0,n-1,1) TREE[i+n]=arr[i];
-		loopR(i,n-1,1,1) TREE[i]=TREE[i<<1] + TREE[i<<1|1];
+		loopR(i,n-1,1,1) TREE[i]=TREE[2*i] + TREE[2*i+1];
 	}
 
 	void update(int p, ll x){
 		p--; // matching index
 		p+=n;
 		TREE[p]=x;
-		for (;p > 0; p >>= 1) TREE[p>>1] = TREE[p] + TREE[p^1];
+		p=p>>1;
+		while(p){
+			TREE[p]=TREE[2*p]+TREE[2*p+1];
+			p=p>>1;
+		}
 	}
 
 	ll query(int l, int r){
 		ll ans=0;
-		--l,--r;
+		--l,--r;	// matching indexes
 		l+=n,r+=n;
 		r++;
-		while(l < r) {
+		while(l < r) {	// range query from [l,r) i.e. L inclusive, R exclusive
 		    if (l&1) ans+=TREE[l++];
 			if (r&1) ans+=TREE[--r];
 			l>>=1;

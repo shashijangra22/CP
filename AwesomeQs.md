@@ -24,3 +24,5 @@
 #DP:
 	- #DigitDp:
 		- https://www.hackerearth.com/problem/algorithm/sum-of-digits-8/
+	- #DP with BitMasks
+		- https://www.codechef.com/problems/TSHIRTS

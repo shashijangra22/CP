@@ -151,3 +151,18 @@ else{
 		return left + ++str[mid] + right
 	}
 }
+
+// consecutive bit strings to intervals
+vector<pll> makeIntervals(string str){
+	vector<pll> v;
+	start=-1;
+	loop(i,0,n-1,1){
+		if(str[i]=='1' and start==-1) start=i;
+		if(str[i]=='0' and start!=-1){
+			v.pb({start,i-1});
+			start=-1;
+		}
+	}
+	if(start!=-1) v.pb({start,n-1});
+	return v;
+}

@@ -15,7 +15,7 @@ loop(i,1,N,1) phi[i]=i;
 loop(i,2,N,1){
 	if (phi[i]==i){ // isPrime
 		phi[i]--;
-		loop(j,i+i,N,i) phi[j]=(phi[j]/i)*(i-1);
+		loop(j,i+i,N,i) phi[j]-=(phi[j]/i)
 	}
 }
 
@@ -25,12 +25,12 @@ ll gcd(ll a, ll b){
 }
 
 // factors of a number N in sqrt(N)
-vi factors;
+vector<ll> factors;
 for(ll x=2; x*x<=N; x++) if (N%x==0) factors.pb(x), while(N%x==0) N/=x;
 if(N>2) factors.pb(N);
 
 // divisors upto number N as Div[x]?
-vvi Div(N);
+vector<vector<ll>> Div(N);
 loop(i,1,N,1) loop(j,i,N,i) Div[j].pb(i);
 
 // prime sieve upto MAX works upto 10**8
@@ -41,7 +41,10 @@ if (max(a,c)>min(b,d)) // disjoint intervals for (a,b) and (c,d)
 else // overlaps
 
 // trailing zeroes in n!
-while(n) ans+=(n/=5);
+while(n){
+	ans+=(n/5);
+	n/=5;
+}
 return ans;
 
 // min and max of (a,b) without using relational operators
