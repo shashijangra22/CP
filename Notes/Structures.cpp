@@ -40,12 +40,13 @@ struct SegTree{
 // DSU
 
 struct DSU{
-	vector<int> parent,low,high;
+	vector<int> parent,low,high,comps;
 
 	DSU(int n){
-		parent.resize(n);
+		parent.resize(n+1);
 		iota(all(parent),0);
 		low=high=parent;
+		comps=n;
 	}
 
 	int FIND(int x){

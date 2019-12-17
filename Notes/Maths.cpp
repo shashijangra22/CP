@@ -26,7 +26,13 @@ ll gcd(ll a, ll b){
 
 // factors of a number N in sqrt(N)
 vector<ll> factors;
-for(ll x=2; x*x<=N; x++) if (N%x==0) factors.pb(x), while(N%x==0) N/=x;
+for(ll x=2; x*x<=N; x++){
+	if (N%x==0){
+		factors.pb(x);
+		while(N%x==0) N/=x;
+	}
+
+}
 if(N>2) factors.pb(N);
 
 // divisors upto number N as Div[x]?

@@ -6,11 +6,13 @@
 #Greedy:
 	- https://www.spoj.com/problems/GCJ101BB/
 
-#Data Structures:
+#Segment Tree:
 	- https://leetcode.com/problems/count-of-smaller-numbers-after-self
 	- https://codeforces.com/contest/1234/problem/D
+	- https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050edd/00000000001a274e 
+#DSU:
 	- https://www.hackerrank.com/contests/hack-it-to-win-it-paypal/challenges/q4-traveling-is-fun
-	- https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050edd/00000000001a274e
+	- https://www.hackerrank.com/challenges/journey-to-the-moon/problem
 
 #Graph:
 	- https://codeforces.com/contest/659/problem/E
@@ -18,7 +20,8 @@
 
 #Maths:
 	- https://www.hackerearth.com/problem/algorithm/too-much-to-count-fb914aed/description/
-
+#Strings:
+	- https://codeforces.com/problemset/problem/126/B
 #Geometry:
 	- https://www.spoj.com/problems/CLOPPAIR/
 #DP:
