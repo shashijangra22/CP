@@ -2,6 +2,7 @@
 	- http://www.spoj.com/problems/AGGRCOW/
 	- https://atcoder.jp/contests/abc141/tasks/abc141_e
 	- https://codeforces.com/contest/1234/problem/D
+	- http://codeforces.com/contest/1288/problem/D
 
 #Greedy:
 	- https://www.spoj.com/problems/GCJ101BB/

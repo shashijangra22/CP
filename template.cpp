@@ -28,8 +28,43 @@ using namespace std;
 #define ctoi(x) (int)((x)-'a')
 #define endl "\n"
 
+ll n,m;
+
+pll check(vvi &v, ll mid){
+	map<ll,ll> masks;
+	ll mask;
+	loop(i,0,n-1,1){
+		mask=0;
+		loop(j,0,m-1,1){
+			if(v[i][j]>=mid) mask |= (1<<j);
+		}
+		masks[mask]=i;
+	}
+	for(auto x:masks){
+		for(auto y:masks){
+			if((x.first|y.first) == (1<<m)-1) return {x.second,y.second};
+		}
+	}
+	return {-1,-1};
+}
+
 int main(){
 	IOS
 	// do magic here
+	cin>>n>>m;
+	vvi v(n);
+	loop(i,0,n-1,1){
+		v[i].resize(m);
+		loop(j,0,m-1,1) cin>>v[i][j];
+	}
+	ll low=0,high=INT_MAX,mid;
+	while(low<high){
+		mid=(low+high+1)/2;
+		pll tmp=check(v,mid);
+		if(tmp.first!=-1 and tmp.second!=-1) low=mid;
+		else high=mid-1;
+	}
+	pll ans=check(v,low);
+	cout<<ans.first+1<<" "<<ans.second+1;
 	return 0;
 }
