@@ -40,7 +40,8 @@ struct SegTree{
 // DSU
 
 struct DSU{
-	vector<int> parent,low,high,comps;
+	vector<int> parent,low,high;
+	ll comps;
 
 	DSU(int n){
 		parent.resize(n+1);
