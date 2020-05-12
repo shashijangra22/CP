@@ -72,3 +72,22 @@ struct DSU{
 		return low[FIND(x)];
 	}
 };
+
+// minQueue
+
+struct minQ{
+	deque<int> dq;
+	
+	void PUSH(int ind){
+		while(dq.size() and factArr[dq.back()] >= factArr[ind]) dq.pop_back();
+		dq.push_back(ind);
+	}
+
+	void POP(int ind){
+		while(dq.size() and dq.front() <= ind) dq.pop_front();
+	}
+
+	int front(){
+		return dq.front();
+	}
+};

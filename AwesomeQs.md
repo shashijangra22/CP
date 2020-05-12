@@ -21,10 +21,14 @@
 
 #Maths:
 	- https://www.hackerearth.com/problem/algorithm/too-much-to-count-fb914aed/description/
+	- https://www.codechef.com/LTIME83B/problems/MEXUM
+
 #Strings:
 	- https://codeforces.com/problemset/problem/126/B
+
 #Geometry:
 	- https://www.spoj.com/problems/CLOPPAIR/
+
 #DP:
 	- #DigitDp:
 		- https://www.hackerearth.com/problem/algorithm/sum-of-digits-8/
