@@ -61,6 +61,7 @@ struct DSU{
 		low[u]=min(low[u],low[v]);
 		high[u]=max(high[u],high[v]);
 		parent[v]=u;
+		comps--;
 		return true;
 	}
 
@@ -79,7 +80,7 @@ struct minQ{
 	deque<int> dq;
 	
 	void PUSH(int ind){
-		while(dq.size() and factArr[dq.back()] >= factArr[ind]) dq.pop_back();
+		while(dq.size() and arr[dq.back()] >= arr[ind]) dq.pop_back();
 		dq.push_back(ind);
 	}
 
@@ -89,5 +90,43 @@ struct minQ{
 
 	int front(){
 		return dq.front();
+	}
+};
+
+// BIT
+
+struct BIT{
+	int n;
+	vector<int> tree;
+
+	BIT(int sz){
+		n = sz;
+		tree.resize(n+1);
+	}
+	void update(int idx,int val){
+		while(idx <= n){
+			tree[idx]+=val;
+			idx += (idx & -idx);
+		}
+	}
+	int query(int idx){
+		int sum = 0;
+		while(idx){
+			sum += tree[idx];
+			idx -= (idx & -idx);
+		}
+		return sum;
+	}
+	int sum(int l, int r){
+		return query(r)-query(l-1);
+	}
+	int getKth(int k){
+		int low=1,high=n,mid;
+		while(low < high){
+			mid=(low+high)/2;
+			if(query(mid) >= k) high=mid;
+			else low=mid+1;
+		}
+		return low;
 	}
 };
