@@ -20,6 +20,8 @@
 # DSU:
 	- https://www.hackerrank.com/contests/hack-it-to-win-it-paypal/challenges/q4-traveling-is-fun
 	- https://www.hackerrank.com/challenges/journey-to-the-moon/problem
+	- https://codeforces.com/problemset/problem/217/A
+	- https://codeforces.com/problemset/problem/959/B
 
 # Graph:
 	- https://codeforces.com/contest/659/problem/E

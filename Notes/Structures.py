@@ -51,3 +51,29 @@ class BIT:
             s += self.tree[idx]
             idx -= (idx & -idx)
         return s
+
+# DSU with random Union
+
+class DSU:
+    
+    def __init__(self,n):
+        self.n = n
+        self.comps = n
+        self.parent = [i for i in range(n)]
+    
+    def FIND(self,x):
+        if x!=self.parent[x]:
+            self.parent[x] = self.FIND(self.parent[x])
+        return self.parent[x]
+    
+    def UNION(self,x,y):
+        xRoot = self.FIND(x)
+        yRoot = self.FIND(y)
+        if xRoot != yRoot:
+            self.comps-=1
+            if random.randint(1,100)&1:
+                self.parent[xRoot] = yRoot
+            else:
+                self.parent[yRoot] = xRoot
+            return 1
+        return 0
