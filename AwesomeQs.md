@@ -4,6 +4,7 @@
 	- https://codeforces.com/contest/1234/problem/D
 	- http://codeforces.com/contest/1288/problem/D
 	- https://codeforces.com/contest/1354/problem/D
+	- https://www.codechef.com/LRNDSA09/problems/SEAD
 
 # Greedy:
 	- https://www.spoj.com/problems/GCJ101BB/
@@ -12,10 +13,14 @@
 	- https://leetcode.com/problems/count-of-smaller-numbers-after-self
 	- https://codeforces.com/contest/1234/problem/D
 	- https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/0000000000337b4d
+	- https://www.spoj.com/problems/INVCNT/
+	- https://www.codechef.com/LRNDSA09/problems/MSTICK
+	- https://www.codechef.com/LRNDSA09/problems/SEAD
 
 # BIT:
 	- https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/0000000000337b4d
 	- https://codeforces.com/contest/1354/problem/D
+	- https://www.spoj.com/problems/INVCNT/
 
 # DSU:
 	- https://www.hackerrank.com/contests/hack-it-to-win-it-paypal/challenges/q4-traveling-is-fun
@@ -38,7 +43,7 @@
 	- https://www.spoj.com/problems/CLOPPAIR/
 
 # DP:
-	- #DigitDp:
+	- # DigitDp:
 		- https://www.hackerearth.com/problem/algorithm/sum-of-digits-8/
-	- #DP with BitMasks
+	- # DP with BitMasks
 		- https://www.codechef.com/problems/TSHIRTS
