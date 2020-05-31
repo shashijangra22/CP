@@ -30,3 +30,11 @@ def gcdExt(a, b):  # gcd extended
     x = y1
     y = x1-y1*(a//b)
     return [g, x, y]
+
+
+def modInv(a, m):   # modular inverse general case
+    g, x, y = gcdExt(a, m)
+    if g != 1:
+        return None
+    x = ((x % m)+m) % m
+    return x

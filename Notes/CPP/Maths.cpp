@@ -46,3 +46,12 @@ ll gcdExt(ll a, ll b, ll &x, ll &y)
     y = x1 - y1 * (a / b);
     return g;
 }
+
+ll modInv(ll a, ll m)   // modular inverse general case
+{
+    ll x, y;
+    ll g = gcdExt(a, m, x, y);
+    if (g != 1)
+        return false;
+    return (x % m + x) % m;
+}

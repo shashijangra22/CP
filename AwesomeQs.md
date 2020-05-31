@@ -43,7 +43,12 @@
 	- https://www.spoj.com/problems/CLOPPAIR/
 
 # DP:
+	- # Subarrays:
+		- https://codeforces.com/contest/1359/problem/D
 	- # DigitDp:
 		- https://www.hackerearth.com/problem/algorithm/sum-of-digits-8/
 	- # DP with BitMasks
 		- https://www.codechef.com/problems/TSHIRTS
+# Tree:
+	- LCA
+		- https://www.codechef.com/problems/TREDIFF
