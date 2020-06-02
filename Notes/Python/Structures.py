@@ -82,3 +82,28 @@ class DSU:
                 self.parent[yRoot] = xRoot
             return 1
         return 0
+
+
+class Trie:
+
+    def __init__(self):
+        self.arr = [None for x in range(26)]
+        self.count = 0
+        self.end = 0
+
+    def insert(self, word):
+        root = self
+        for x in word:
+            if root.arr[ord(x) - 97] is None:
+                root.arr[ord(x) - 97] = Trie()
+            root = root.arr[ord(x) - 97]
+            root.count += 1
+        root.end = True
+
+    def findPrefix(self, word):
+        root = self
+        for x in word:
+            if root.arr[ord(x) - 97] is None:
+                return 0,0
+            root = root.arr[ord(x) - 97]
+        return root.end, root.count

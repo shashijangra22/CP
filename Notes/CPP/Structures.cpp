@@ -164,3 +164,36 @@ struct BIT
 		return low;
 	}
 };
+
+// Trie
+
+struct trie
+{
+	struct trie *arr[26] = {NULL};
+	int count,end;
+
+	void insert(string word)
+	{
+		trie *root = this;
+		for (auto x : word)
+		{
+			if (root->arr[x - 'a'] == NULL)
+				root->arr[x - 'a'] = new trie();
+			root = root->arr[x - 'a'];
+			root->count += 1;
+		}
+		root->end = 1;
+	}
+
+	pair<int,int> searchPrefix(string word)
+	{
+		trie *root = this;
+		for (auto x : word)
+		{
+			if (root->arr[x - 'a'] == NULL)
+				return {0, 0};
+			root = root->arr[x - 'a']
+		}
+		return { root->end, root->count }
+	}
+};
