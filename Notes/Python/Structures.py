@@ -87,23 +87,46 @@ class DSU:
 class Trie:
 
     def __init__(self):
-        self.arr = [None for x in range(26)]
+        self.arr = {}
         self.count = 0
         self.end = 0
 
     def insert(self, word):
         root = self
         for x in word:
-            if root.arr[ord(x) - 97] is None:
-                root.arr[ord(x) - 97] = Trie()
-            root = root.arr[ord(x) - 97]
+            if x not in root.arr:
+                root.arr[x] = Trie()
+            root = root.arr[x]
             root.count += 1
         root.end = True
 
     def findPrefix(self, word):
         root = self
         for x in word:
-            if root.arr[ord(x) - 97] is None:
-                return 0,0
-            root = root.arr[ord(x) - 97]
+            if x not in root.arr:
+                return 0, 0
+            root = root.arr[x]
         return root.end, root.count
+
+
+class BitTrie:
+
+    def __init__(self):
+        self.arr = [None, None]
+
+    def insert(self, num):
+        for x in range(31, -1, -1):
+            bit = (num >> x) & 1
+            if self.arr[bit] is None:
+                self.arr[bit] = BitTrie()
+            self = self.arr[bit]
+        self.ends = True
+
+    def query(self, num):
+        ans = 0
+        for x in range(31, -1, -1):
+            bit = (num >> x) & 1
+            bit = bit ^ 1 if self.arr[bit ^ 1] else bit
+            self = self.arr[bit]
+            ans = (ans << 1) | bit
+        return ans ^ num

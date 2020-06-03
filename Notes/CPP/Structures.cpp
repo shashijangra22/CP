@@ -165,35 +165,68 @@ struct BIT
 	}
 };
 
-// Trie
+// TRIE
 
-struct trie
+struct TRIE
 {
-	struct trie *arr[26] = {NULL};
-	int count,end;
+	struct TRIE *arr[26] = {NULL};
+	int count, end;
 
 	void insert(string word)
 	{
-		trie *root = this;
+		TRIE *root = this;
 		for (auto x : word)
 		{
-			if (root->arr[x - 'a'] == NULL)
-				root->arr[x - 'a'] = new trie();
+			if (!root->arr[x - 'a'])
+				root->arr[x - 'a'] = new TRIE();
 			root = root->arr[x - 'a'];
 			root->count += 1;
 		}
 		root->end = 1;
 	}
 
-	pair<int,int> searchPrefix(string word)
+	pair<int, int> searchPrefix(string word)
 	{
-		trie *root = this;
+		TRIE *root = this;
 		for (auto x : word)
 		{
-			if (root->arr[x - 'a'] == NULL)
+			if (!root->arr[x - 'a'])
 				return {0, 0};
 			root = root->arr[x - 'a']
 		}
 		return { root->end, root->count }
+	}
+};
+
+struct BitTrie
+{
+	struct BitTrie *arr[2] = {NULL};
+
+	void insert(int num)
+	{
+		BitTrie *root = this;
+		int i = 32;
+		while (i--)
+		{
+			int bit = (num >> i) & 1;
+			if (!root->arr[bit])
+				root->arr[bit] = new BitTrie();
+			root = root->arr[bit];
+		}
+	}
+
+	int XorMaxQuery(int num)
+	{
+		int ans = 0;
+		BitTrie *root = this;
+		int i = 32;
+		while (i--)
+		{
+			int bit = (num >> i) & 1;
+			bit = (root->arr[bit ^ 1]) ? bit ^ 1 : bit;
+			ans = (ans << 1) | bit;
+			root = root->arr[bit];
+		}
+		return ans ^ num;
 	}
 };

@@ -52,3 +52,7 @@
 # Tree:
 	- LCA
 		- https://www.codechef.com/problems/TREDIFF
+
+# Trie:
+	- https://leetcode.com/problems/prefix-and-suffix-search/
+	- https://www.hackerrank.com/challenges/maximum-xor/problem
