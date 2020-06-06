@@ -29,7 +29,7 @@
 	- https://codeforces.com/problemset/problem/217/A
 	- https://codeforces.com/problemset/problem/959/B
 
-# Graph:
+# Graphs:
 	- https://codeforces.com/contest/659/problem/E
 	- https://codeforces.com/problemset/problem/277/A
 
@@ -57,3 +57,4 @@
 # Trie:
 	- https://leetcode.com/problems/prefix-and-suffix-search/
 	- https://www.hackerrank.com/challenges/maximum-xor/problem
+	- https://www.spoj.com/problems/SUBXOR/

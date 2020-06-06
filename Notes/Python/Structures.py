@@ -65,11 +65,15 @@ class DSU:
         self.n = n
         self.comps = n
         self.parent = [i for i in range(n)]
+        self.size = [1 for i in range(n)]
 
     def FIND(self, x):
         if x != self.parent[x]:
             self.parent[x] = self.FIND(self.parent[x])
         return self.parent[x]
+
+    def getSize(self, x):
+        return self.size[self.FIND(x)]
 
     def UNION(self, x, y):
         xRoot = self.FIND(x)
@@ -78,8 +82,10 @@ class DSU:
             self.comps -= 1
             if random.randint(1, 100) & 1:
                 self.parent[xRoot] = yRoot
+                self.size[yRoot] += self.size[xRoot]
             else:
                 self.parent[yRoot] = xRoot
+                self.size[xRoot] += self.size[yRoot]
             return 1
         return 0
 

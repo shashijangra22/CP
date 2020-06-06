@@ -50,12 +50,14 @@ struct SegTree
 
 struct DSU
 {
-	vector<int> parent, low, high;
+	vector<int> parent, low, high, size;
 	ll comps;
 
 	DSU(int n)
 	{
 		parent.resize(n + 1);
+		size.resize(n + 1);
+		fill(all(size), 1);
 		iota(all(parent), 0);
 		low = high = parent;
 		comps = n;
@@ -75,9 +77,23 @@ struct DSU
 			return false;
 		low[u] = min(low[u], low[v]);
 		high[u] = max(high[u], high[v]);
-		parent[v] = u;
+		if (rand() & 1)
+		{
+			parent[v] = u;
+			size[u] += size[v];
+		}
+		else
+		{
+			parent[u] = v;
+			size[v] += u;
+		}
 		comps--;
 		return true;
+	}
+
+	int getSize(int x)
+	{
+		return size[FIND(x)];
 	}
 
 	int getHigh(int x)
