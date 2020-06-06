@@ -16,6 +16,7 @@
 	- https://www.spoj.com/problems/INVCNT/
 	- https://www.codechef.com/LRNDSA09/problems/MSTICK
 	- https://www.codechef.com/LRNDSA09/problems/SEAD
+	- https://www.hackerearth.com/problem/algorithm/class-monitor-c76dc24a/description/
 
 # BIT:
 	- https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/0000000000337b4d
