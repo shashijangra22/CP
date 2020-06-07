@@ -58,3 +58,4 @@
 	- https://leetcode.com/problems/prefix-and-suffix-search/
 	- https://www.hackerrank.com/challenges/maximum-xor/problem
 	- https://www.spoj.com/problems/SUBXOR/
+	- https://codeforces.com/contest/455/problem/B

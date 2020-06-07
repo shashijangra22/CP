@@ -35,6 +35,16 @@ class SegTree:
             self.tree[idx] = self.tree[2*idx] + self.tree[2*idx + 1]
             idx = idx >> 1
 
+    def getKth(self, k):
+        low, high = 1, self.n
+        while low < high:
+            mid = (low+high)//2
+            if self.query(1, mid) < k:
+                low = mid + 1
+            else:
+                high = mid
+        return low
+
 # BIT with point updates
 
 
@@ -42,10 +52,10 @@ class BIT:
 
     def __init__(self, arr, n):
         self.n = n
-        self.tree = [0 for x in range(n+1)]
+        self.tree = [0 for x in range(self.n+1)]
 
     def update(self, idx, val):
-        while idx <= n:
+        while idx <= self.n:
             self.tree[idx] += val
             idx += (idx & -idx)
 
@@ -55,6 +65,16 @@ class BIT:
             s += self.tree[idx]
             idx -= (idx & -idx)
         return s
+
+    def getKth(self, k):
+        low, high = 1, self.n
+        while low < high:
+            mid = (low+high)//2
+            if self.query(mid) < k:
+                low = mid + 1
+            else:
+                high = mid
+        return low
 
 # DSU with random Union
 
@@ -98,21 +118,19 @@ class Trie:
         self.end = 0
 
     def insert(self, word):
-        root = self
         for x in word:
-            if x not in root.arr:
-                root.arr[x] = Trie()
-            root = root.arr[x]
-            root.count += 1
-        root.end = True
+            if x not in self.arr:
+                self.arr[x] = Trie()
+            self = self.arr[x]
+            self.count += 1
+        self.end = True
 
     def findPrefix(self, word):
-        root = self
         for x in word:
-            if x not in root.arr:
+            if x not in self.arr:
                 return 0, 0
-            root = root.arr[x]
-        return root.end, root.count
+            self = self.arr[x]
+        return self.end, self.count
 
 
 class BitTrie:
@@ -128,7 +146,7 @@ class BitTrie:
             self = self.arr[bit]
         self.ends = True
 
-    def query(self, num):
+    def XorMaxQuery(self, num):
         ans = 0
         for x in range(31, -1, -1):
             bit = (num >> x) & 1
