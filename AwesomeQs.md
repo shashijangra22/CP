@@ -32,6 +32,7 @@
 # Graphs:
 	- https://codeforces.com/contest/659/problem/E
 	- https://codeforces.com/problemset/problem/277/A
+	- https://codeforces.com/contest/1365/problem/D
 
 # Maths:
 	- https://www.hackerearth.com/problem/algorithm/too-much-to-count-fb914aed/description/
