@@ -17,5 +17,13 @@
 
 # binarySearch
 
-Q1 = "https://www.codechef.com/LRNDSA02/problems/COMPILER"
-Q2 = 
+    # Resources:
+    
+    [] https://www.topcoder.com/community/competitive-programming/tutorials/binary-search
+
+    # Questions:
+    [] https://www.hackerearth.com/problem/algorithm/class-monitor-c76dc24a/
+    [] https://codeforces.com/problemset/problem/1208/B
+    [] https://codeforces.com/problemset/problem/1201/C
+    [] https://www.spoj.com/problems/AGGRCOW/
+    [] https://codeforces.com/problemset/problem/1288/D
