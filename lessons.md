@@ -27,3 +27,21 @@
     [] https://codeforces.com/problemset/problem/1201/C
     [] https://www.spoj.com/problems/AGGRCOW/
     [] https://codeforces.com/problemset/problem/1288/D
+
+# Number Theory
+
+    # Resources:
+
+    [] https://cp-algorithms.com/algebra/module-inverse.html
+    [] https://cp-algorithms.com/algebra/phi-function.html
+    [] https://www.hackerearth.com/practice/notes/solving-linear-recurrence-relation/
+
+# Hashing
+
+    # Resources:
+
+    [] https://cp-algorithms.com/string/string-hashing.html
+    [] https://cp-algorithms.com/string/rabin-karp.html
+    
+    # Questions:
+    [] http://www.spoj.com/problems/NHAY/
