@@ -46,12 +46,16 @@
 ## Questions:
 - [ ] http://www.spoj.com/problems/NHAY/
 
-# Shortest Paths
+# Graphs
 
 ## Resources:
 
 - [ ] https://cp-algorithms.com/graph/bellman_ford.html
+- [ ] https://cp-algorithms.com/graph/bipartite-check.html
+- [ ] https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
 
 ## Questions:
 
 - [ ] https://leetcode.com/problems/cheapest-flights-within-k-stops/
+- [ ] http://www.spoj.com/problems/BUGLIFE/
+- [ ] https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/inversion-graph-4670b723/
