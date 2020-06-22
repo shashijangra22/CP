@@ -1,7 +1,6 @@
 # Trie
 
 ## Resources
-
 - [ ] https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/tutorial/
 - [ ] "https://www.topcoder.com/community/competitive-programming/tutorials/using-tries/
 - [ ] "https://www.quora.com/q/threadsiiithyderabad/Tutorial-on-Trie-and-example-problems"
@@ -9,7 +8,6 @@
 - [ ] "https://www.hackerrank.com/challenges/maximum-xor/editorial"
 
 ## Questions
-
 - [ ] "https://leetcode.com/problems/implement-trie-prefix-tree/"
 - [ ] "https://leetcode.com/problems/add-and-search-word-data-structure-design/"
 - [ ] "https://leetcode.com/problems/prefix-and-suffix-search/"
@@ -18,9 +16,7 @@
 # Binary Search
 
 ## Resources:
-
 - [ ] https://www.topcoder.com/community/competitive-programming/tutorials/binary-search
-
 ## Questions:
 - [ ] https://www.hackerearth.com/problem/algorithm/class-monitor-c76dc24a/
 - [ ] https://codeforces.com/problemset/problem/1208/B
@@ -31,7 +27,6 @@
 # Number Theory
 
 ## Resources:
-
 - [ ] https://cp-algorithms.com/algebra/module-inverse.html
 - [ ] https://cp-algorithms.com/algebra/phi-function.html
 - [ ] https://www.hackerearth.com/practice/notes/solving-linear-recurrence-relation/
@@ -39,23 +34,30 @@
 # Hashing
 
 ## Resources
-
 - [ ] https://cp-algorithms.com/string/string-hashing.html
 - [ ] https://cp-algorithms.com/string/rabin-karp.html
     
 ## Questions:
 - [ ] http://www.spoj.com/problems/NHAY/
 
+# Arrays
+
+## Resources
+- [ ] https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
+
+## Questions
+- [ ] https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/inversion-graph-4670b723/
+
 # Graphs
 
 ## Resources:
-
 - [ ] https://cp-algorithms.com/graph/bellman_ford.html
 - [ ] https://cp-algorithms.com/graph/bipartite-check.html
-- [ ] https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
+- [ ] https://cp-algorithms.com/graph/bridge-searching.html
+- [ ] https://cp-algorithms.com/graph/cutpoints.html
 
 ## Questions:
-
 - [ ] https://leetcode.com/problems/cheapest-flights-within-k-stops/
 - [ ] http://www.spoj.com/problems/BUGLIFE/
-- [ ] https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/inversion-graph-4670b723/
+- [ ] https://www.spoj.com/problems/EC_P/
+- [ ] https://www.spoj.com/problems/SUBMERGE/

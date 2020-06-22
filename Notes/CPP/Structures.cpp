@@ -247,14 +247,15 @@ struct BitTrie
 	}
 };
 
-// detecting bridges in a graph
+// detecting bridges and articulation points in a graph
 struct Graph
 {
 	vi visited, low, disc;
 	vector<pll> bridges;
+	set<ll> AP;
 	vvi adj;
 	ll timer = 0;
-	Graph(ll n, ll m)
+	Graph(ll n)
 	{
 		adj.resize(n + 1);
 		visited.assign(n + 1, 0);
@@ -272,25 +273,36 @@ struct Graph
 	{
 		visited[node] = 1;
 		low[node] = disc[node] = timer++;
+		ll children = 0;
 		for (auto x : adj[node])
 		{
 			if (x == par)
 				continue;
 			if (visited[x])
-				low[node] = min(low[node], low[x]);
+				low[node] = min(low[node], disc[x]);
 			else
 			{
 				dfs(x, node);
+				children++;
 				low[node] = min(low[node], low[x]);
 				if (low[x] > disc[node])
 					bridges.push_back({min(x, node), max(x, node)});
+				if (low[x] >= disc[node] and par != -1)
+					AP.insert(node);
 			}
 		}
+		if (par == -1 and chidren > 1)
+			AP.insert(node);
 	}
 
 	void detectBridges()
 	{
 		loop(i, 1, adj.size() - 1, 1) if (not visited[i]) dfs(i, -1);
 		sort(all(bridges));
+	}
+
+	void detectAP()
+	{
+		dfs(1, -1);
 	}
 };
