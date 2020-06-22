@@ -29,6 +29,7 @@
 	- [ ] https://www.hackerrank.com/challenges/journey-to-the-moon/problem
 	- [ ] https://codeforces.com/problemset/problem/217/A
 	- [ ] https://codeforces.com/problemset/problem/959/B
+	- [ ] https://www.codechef.com/problems/PERCAPTA
 
 # Graphs:
 	- [ ] https://codeforces.com/contest/659/problem/E
