@@ -55,6 +55,7 @@
 - [ ] https://cp-algorithms.com/graph/bipartite-check.html
 - [ ] https://cp-algorithms.com/graph/bridge-searching.html
 - [ ] https://cp-algorithms.com/graph/cutpoints.html
+- [ ] https://codeforces.com/blog/entry/71146
 
 ## Questions:
 - [ ] https://leetcode.com/problems/cheapest-flights-within-k-stops/
