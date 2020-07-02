@@ -39,31 +39,3 @@ vi rabinKarp(string &str, string &text)
 	}
 	return occ;
 }
-// suffix Array
-vector<int> suffixArray(string &s)
-{
-	s += '$';
-	int n = s.size();
-	// k = 0
-	vector<int> p(n), c(n);
-	vector<pair<int, int>> a(n);
-	loop(i, 0, n - 1, 1) a[i] = {s[i], i};
-	sort(all(a));
-	loop(i, 0, n - 1, 1) p[i] = a[i].second;
-
-	c[p[0]] = 0;
-	loop(i, 1, n - 1, 1) c[p[i]] = c[p[i - 1]] + (a[i].first != a[i - 1].first);
-
-	int k = 0;
-	while ((1 << k) < n)
-	{ // k => k + 1
-		vector<pair<pair<int, int>, int>> a(n);
-		loop(i, 0, n - 1, 1) a[i] = {{c[i], c[(i + (1 << k)) % n]}, i};
-		sort(all(a));
-		loop(i, 0, n - 1, 1) p[i] = a[i].second;
-		c[p[0]] = 0;
-		loop(i, 1, n - 1, 1) c[p[i]] = c[p[i - 1]] + (a[i].first != a[i - 1].first);
-		k++;
-	}
-	return p;
-}
