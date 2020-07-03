@@ -106,4 +106,34 @@ struct suffixArray
         }
     }
 
+	string check(ll mid, ll sz){
+		ll ind = p[mid];
+		ll chars = min(n - ind, sz);
+		return str.substr(ind,chars);
+	}
+	
+	ll lastOcc(string &query){
+		if (query.size() >= str.size()) return 0;
+		ll low = 1,high = n - 1;
+		while (low < high){
+			ll mid = (low+high)/2;
+			if (query <= check(mid,query.size())) high = mid;
+			else low = mid + 1;
+		}
+		if (check(low,query.size()) == query) return low;
+		return 0;
+	}
+
+	ll firstOcc(string &query){
+		if (query.size() >= str.size()) return 0;
+		ll low = 1,high = n-1;
+		while(low < high){
+			ll mid = (low+high+1)/2;
+			if( query >= check(mid,query.size())) low = mid;
+			else high = mid - 1;
+		}
+		if (check(low,query.size()) == query) return low;
+		return 0;
+	}
+
 };
