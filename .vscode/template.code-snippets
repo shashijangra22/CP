@@ -1,0 +1,67 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"CP CPP Template" : {
+		"prefix":"!cp",
+		"scope": "cpp",
+		"body": [
+			"// $CLIPBOARD",
+			"#include<bits/stdc++.h>",
+			"using namespace std;",
+			"#define ll long long",
+			"#define pll pair<ll,ll>",
+			"#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);",
+			"#define vi vector<ll>",
+			"#define vvi vector<vi>",
+			"#define P_Q priority_queue<ll>",
+			"#define p_q priority_queue<ll,vi,greater<ll>>",
+			"#define loop(i,x,y,z) for(int i=x; i<=y; i+=z)",
+			"#define loopR(i,x,y,z) for(int i=x; i>=y; i-=z)",
+			"#define all(x) begin(x), end(x)",
+			"#define allR(x) rbegin(x), rend(x)",
+			"#define watch(x) cout<<(#x)<<\" is \"<<x<<'\\n'",
+			"#define display(v,c) for(auto x:v) cout<<x<<c;",
+			"#define endl \"\\n\"",
+			"",
+			"int main(){",
+				"\tIOS",
+				"\t// do magic here",
+				"\tll t;",
+				"\tcin>>t;",
+				"\twhile(t--){",
+					"\t\t$0",
+				"\t}",
+				"\treturn 0;",
+			"}"
+		],
+		"description": "CP template for CPP"
+	},
+	"Python CP Template" : {
+		"prefix": "!cp",
+		"scope": "python",
+		"body": [
+			"#$CLIPBOARD",
+			"import sys",
+			"reader = (s.rstrip() for s in sys.stdin)",
+			"input = reader.__next__",
+			"# do magic here",
+			"t = int(input())",
+			"for _ in range(t):",
+			"\t$0"
+		]
+	}
+}
