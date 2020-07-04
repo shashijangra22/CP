@@ -1,64 +1,88 @@
 # Trie
 
 ## Resources
-- [ ] https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/tutorial/
-- [ ] "https://www.topcoder.com/community/competitive-programming/tutorials/using-tries/
-- [ ] "https://www.quora.com/q/threadsiiithyderabad/Tutorial-on-Trie-and-example-problems"
-- [ ] "https://en.wikipedia.org/wiki/Trie"
-- [ ] "https://www.hackerrank.com/challenges/maximum-xor/editorial"
+- [x] https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/tutorial/
+- [x] "https://www.topcoder.com/community/competitive-programming/tutorials/using-tries/
+- [x] "https://www.quora.com/q/threadsiiithyderabad/Tutorial-on-Trie-and-example-problems"
+- [x] "https://en.wikipedia.org/wiki/Trie"
+- [x] "https://www.hackerrank.com/challenges/maximum-xor/editorial"
 
 ## Questions
-- [ ] "https://leetcode.com/problems/implement-trie-prefix-tree/"
-- [ ] "https://leetcode.com/problems/add-and-search-word-data-structure-design/"
-- [ ] "https://leetcode.com/problems/prefix-and-suffix-search/"
-- [ ] "https://www.hackerrank.com/challenges/maximum-xor/problem"
+- [x] "https://leetcode.com/problems/implement-trie-prefix-tree/"
+- [x] "https://leetcode.com/problems/add-and-search-word-data-structure-design/"
+- [x] "https://leetcode.com/problems/prefix-and-suffix-search/"
+- [x] "https://www.hackerrank.com/challenges/maximum-xor/problem"
 
 # Binary Search
 
 ## Resources:
-- [ ] https://www.topcoder.com/community/competitive-programming/tutorials/binary-search
+- [x] https://www.topcoder.com/community/competitive-programming/tutorials/binary-search
 ## Questions:
-- [ ] https://www.hackerearth.com/problem/algorithm/class-monitor-c76dc24a/
-- [ ] https://codeforces.com/problemset/problem/1208/B
-- [ ] https://codeforces.com/problemset/problem/1201/C
-- [ ] https://www.spoj.com/problems/AGGRCOW/
-- [ ] https://codeforces.com/problemset/problem/1288/D
+- [x] https://www.hackerearth.com/problem/algorithm/class-monitor-c76dc24a/
+- [x] https://codeforces.com/problemset/problem/1208/B
+- [x] https://codeforces.com/problemset/problem/1201/C
+- [x] https://www.spoj.com/problems/AGGRCOW/
+- [x] https://codeforces.com/problemset/problem/1288/D
 
 # Number Theory
 
 ## Resources:
-- [ ] https://cp-algorithms.com/algebra/module-inverse.html
-- [ ] https://cp-algorithms.com/algebra/phi-function.html
-- [ ] https://www.hackerearth.com/practice/notes/solving-linear-recurrence-relation/
+- [x] https://cp-algorithms.com/algebra/module-inverse.html
+- [x] https://cp-algorithms.com/algebra/phi-function.html
+- [x] https://www.hackerearth.com/practice/notes/solving-linear-recurrence-relation/
 
-# Hashing
+# Strings
 
-## Resources
-- [ ] https://cp-algorithms.com/string/string-hashing.html
-- [ ] https://cp-algorithms.com/string/rabin-karp.html
+## Hashing
+
+### Resources
+- [x] https://cp-algorithms.com/string/string-hashing.html
+- [x] https://cp-algorithms.com/string/rabin-karp.html
     
-## Questions:
-- [ ] http://www.spoj.com/problems/NHAY/
+### Questions:
+- [x] http://www.spoj.com/problems/NHAY/
+
+## Suffix Array
+
+### Resources
+- [ ] https://codeforces.com/edu/course/2
+
+### Questions
+- [ ] https://codeforces.com/edu/course/2
 
 # Arrays
 
 ## Resources
-- [ ] https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
+- [x] https://cp-algorithms.com/sequences/longest_increasing_subsequence.html
 
 ## Questions
-- [ ] https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/inversion-graph-4670b723/
+- [x] https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/inversion-graph-4670b723/
 
 # Graphs
 
-## Resources:
-- [ ] https://cp-algorithms.com/graph/bellman_ford.html
-- [ ] https://cp-algorithms.com/graph/bipartite-check.html
+## Shortest Paths
+
+### Resources
+- [x] https://cp-algorithms.com/graph/bellman_ford.html
+
+### Questions
+- [x] https://leetcode.com/problems/cheapest-flights-within-k-stops/
+
+## Bipartite Graphs
+
+### Resources
+- [x] https://cp-algorithms.com/graph/bipartite-check.html
+
+### Questions
+- [x] http://www.spoj.com/problems/BUGLIFE/
+
+## Articulation Points and Bridges
+
+### Resources:
 - [ ] https://cp-algorithms.com/graph/bridge-searching.html
 - [ ] https://cp-algorithms.com/graph/cutpoints.html
 - [ ] https://codeforces.com/blog/entry/71146
 
-## Questions:
-- [ ] https://leetcode.com/problems/cheapest-flights-within-k-stops/
-- [ ] http://www.spoj.com/problems/BUGLIFE/
+### Questions:
 - [ ] https://www.spoj.com/problems/EC_P/
 - [ ] https://www.spoj.com/problems/SUBMERGE/
