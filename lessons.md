@@ -79,10 +79,10 @@
 ## Articulation Points and Bridges
 
 ### Resources:
-- [ ] https://cp-algorithms.com/graph/bridge-searching.html
-- [ ] https://cp-algorithms.com/graph/cutpoints.html
-- [ ] https://codeforces.com/blog/entry/71146
+- [x] https://cp-algorithms.com/graph/bridge-searching.html
+- [x] https://cp-algorithms.com/graph/cutpoints.html
+- [x] https://codeforces.com/blog/entry/71146
 
 ### Questions:
-- [ ] https://www.spoj.com/problems/EC_P/
-- [ ] https://www.spoj.com/problems/SUBMERGE/
+- [x] https://www.spoj.com/problems/EC_P/
+- [x] https://www.spoj.com/problems/SUBMERGE/
