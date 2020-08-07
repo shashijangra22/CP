@@ -33,6 +33,7 @@
 			"#define loopR(i,x,y,z) for(int i=x; i>=y; i-=z)",
 			"#define all(x) begin(x), end(x)",
 			"#define allR(x) rbegin(x), rend(x)",
+			"#define sz(x) (int)(x.size())",
 			"#define watch(x) cout<<(#x)<<\" is \"<<x<<'\\n'",
 			"#define display(v,c) for(auto x:v) cout<<x<<c;",
 			"#define endl \"\\n\"",
