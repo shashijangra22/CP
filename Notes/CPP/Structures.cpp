@@ -1,4 +1,4 @@
-// segment tree with point updates
+// segment tree iterative with point updates
 
 struct SegTree
 {
@@ -304,4 +304,58 @@ struct Graph
 	{
 		dfs(1, -1);
 	}
+};
+
+// segtree recursive with range operations
+struct SegTree
+{
+
+    vi operations, mins;
+    int size = 1;
+
+    void init(int n)
+    {
+        while (size < n)
+            size *= 2;
+        operations.assign(2 * size, 0LL);
+        mins.assign(2 * size, 0LL);
+    }
+
+    void add(int l, int r, int v, int x, int lx, int rx)
+    {
+        if (r <= lx or l >= rx)
+            return; // disjoint case
+        if (lx >= l and rx <= r)
+        { // subarray case
+            operations[x] += v;
+            mins[x] += v;
+            return;
+        }
+        int m = (lx + rx) / 2;
+        add(l, r, v, 2 * x + 1, lx, m);
+        add(l, r, v, 2 * x + 2, m, rx);
+        mins[x] = min(mins[2 * x + 1], mins[2 * x + 2]) + operations[x];
+    }
+
+    ll get(int l, int r, int x, int lx, int rx)
+    {
+        if (r <= lx or l >= rx)
+            return LLONG_MAX; // disjoint case
+        if (lx >= l and rx <= r)
+            return mins[x]; // subarray case
+        int m = (lx + rx) / 2;
+        ll m1 = get(l, r, 2 * x + 1, lx, m);
+        ll m2 = get(l, r, 2 * x + 2, m, rx);
+        return min(m1, m2) + operations[x];
+    }
+
+    void ADD(int l, int r, int v)
+    {
+        add(l, r, v, 0, 0, size);
+    }
+
+    ll MIN(int l, int r)
+    {
+        return get(l, r, 0, 0, size);
+    }
 };
