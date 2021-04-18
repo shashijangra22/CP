@@ -5,7 +5,7 @@
 	- [ ] http://codeforces.com/contest/1288/problem/D
 	- [ ] https://codeforces.com/contest/1354/problem/D
 	- [ ] https://www.codechef.com/LRNDSA09/problems/SEAD
-	- [ ] https://codeforces.com/contest/1370/problem/D
+	- [ ] https://codeforces.com/contest/1370/problem/Ds
 
 # Greedy:
 	- [ ] https://www.spoj.com/problems/GCJ101BB/
