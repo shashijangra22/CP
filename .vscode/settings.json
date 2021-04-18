@@ -39,5 +39,6 @@
         "typeindex": "cpp",
         "valarray": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "python.pythonPath": "g++"
 }
