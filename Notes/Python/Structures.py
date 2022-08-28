@@ -76,7 +76,7 @@ class BIT:
                 high = mid
         return low
 
-# DSU with random Union
+# DSU with size and path compression heuristics
 
 
 class DSU:
@@ -92,22 +92,16 @@ class DSU:
             self.parent[x] = self.FIND(self.parent[x])
         return self.parent[x]
 
-    def getSize(self, x):
-        return self.size[self.FIND(x)]
-
     def UNION(self, x, y):
-        xRoot = self.FIND(x)
-        yRoot = self.FIND(y)
-        if xRoot != yRoot:
-            self.comps -= 1
-            if random.randint(1, 100) & 1:
-                self.parent[xRoot] = yRoot
-                self.size[yRoot] += self.size[xRoot]
-            else:
-                self.parent[yRoot] = xRoot
-                self.size[xRoot] += self.size[yRoot]
-            return 1
-        return 0
+        x, y = self.FIND(x), self.FIND(y)
+        if x == y:
+            return 0
+        self.comps -= 1
+        if self.size[x] > self.size[y]:
+            x, y = y, x
+        self.parent[x] = y
+        self.size[y] += self.size[x]
+        return 1
 
 
 class Trie:

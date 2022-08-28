@@ -38,7 +38,15 @@
         "utility": "cpp",
         "typeindex": "cpp",
         "valarray": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "algorithm": "cpp",
+        "stack": "cpp",
+        "__split_buffer": "cpp",
+        "numeric": "cpp",
+        "queue": "cpp",
+        "__tree": "cpp",
+        "set": "cpp",
+        "map": "cpp"
     },
-    "python.pythonPath": "g++"
+    "python.pythonPath": "/Library/Developer/CommandLineTools/usr/bin/python3"
 }

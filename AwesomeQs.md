@@ -65,3 +65,5 @@
 	- [ ] https://www.hackerrank.com/challenges/maximum-xor/problem
 	- [ ] https://www.spoj.com/problems/SUBXOR/
 	- [ ] https://codeforces.com/contest/455/problem/B
+# Two Pointers:
+	- [ ] https://codeforces.com/edu/course/2/lesson/9/3/practice/contest/307094/problem/A

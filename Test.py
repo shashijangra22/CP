@@ -5,7 +5,6 @@ import sys
 import os
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-u","--url",help="Enter URL to the problem")
 ap.add_argument("-f","--file",help="Enter path of file to be tested",required=True)
 args = vars(ap.parse_args())
 
@@ -13,12 +12,12 @@ def getUrlFromFile():
     f = open(args["file"],"r")
     URL = f.read().split('\n')[0]
     f.close()
-    pos = URL.find("https")
+    pos = URL.find("http")
     if pos!=-1:
         return URL[pos:]
     return None
 
-args["url"] = args["url"] if args["url"] else getUrlFromFile()
+args["url"] = getUrlFromFile()
 
 def getTests():
     inputs,outputs = [],[]
