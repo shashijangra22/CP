@@ -1,14 +1,12 @@
 from bs4 import BeautifulSoup as bs
-import urllib.request
+import requests
 import argparse
-import sys
 import os
 
 ap = argparse.ArgumentParser()
 ap.add_argument(
     "-f", "--file", help="Enter path of file to be tested", required=True)
 args = vars(ap.parse_args())
-
 
 def getUrlFromFile():
     f = open(args["file"], "r")
@@ -25,8 +23,8 @@ args["url"] = getUrlFromFile()
 
 def getTests():
     inputs, outputs = [], []
-    source = urllib.request.urlopen(args["url"]).read()
-    soup = bs(source, "lxml")
+    res = requests.get(args["url"]).text
+    soup = bs(res, 'html.parser')
 
     def scrapeInputText(div):
         ans = [i.text for i in div.find('pre').children]
@@ -37,7 +35,6 @@ def getTests():
 
     inputDiv = soup.find_all('div', {"class": "input"})
     outputDiv = soup.find_all('div', {"class": "output"})
-
     for x in range(len(inputDiv)):
         inputs.append(scrapeInputText(inputDiv[x]))
         outputs.append(scrapeOutputText(outputDiv[x]))
