@@ -4,12 +4,15 @@
         {
             "type": "shell",
             "label": "Test Sample Cases",
-            "command": "python3",
+            "command": "${command:python.interpreterPath}",
             "args": [
-                "~/Desktop/CP/Test.py",
+                "${workspaceFolder}/Test.py",
                 "-f",
                 "${file}"
             ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "problemMatcher": [
                 "$gcc"
             ],
